@@ -1,0 +1,221 @@
+/* global styling */
+
+/* Stjärnan precis här nedan används för att styla alla taggar på hela webbsidan - använd med försiktighet (eller inte och se roliga konsekvenser) */
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+
+ *:active > * {
+   outline: solid 1px red;
+}
+
+*:active > *:where(div){
+   background-color: rgb(249, 199, 206);
+}
+
+*:active > *:where(h1), 
+*:active > *:where(h2)
+{
+   background-color: lightgreen;
+} 
+
+
+
+body {
+   font-family: sans-serif;
+   background-color: #e6e6e6;
+   margin: 0;
+   font-size: 1.125em;
+}
+
+header, footer {
+  
+   background-color: hotpink;
+   padding: .2rem 2rem;
+}
+
+article header {
+
+   background-color: #ffffff;
+   border-radius: 2rem  ;
+
+   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.121);
+   font-size: medium;
+   margin-left: 2rem;
+   margin-right: 2rem;
+}
+article header p{
+   width: 43rem;
+}
+
+nav {
+   display: flex;
+   gap: 1.5rem;
+
+   justify-content: space-between;
+   align-items: center;
+
+}
+main{
+   margin-inline: 10rem;
+   margin-top: 2rem;
+}
+.flex-layout {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+}
+
+.primary-navigation {
+   display: flex;
+   gap: 1.5rem;
+   list-style: none;             /* ta bort punkter framför varje */
+   white-space: nowrap;
+}
+
+.footer-navigation {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   gap: 1rem;
+   list-style: none;
+}
+
+.grid-layout {
+   display: grid;
+   grid-template-columns: 1fr 1.618fr;
+   margin-top: 2rem;
+   gap: 0.5rem;
+   width: 70%;
+   margin-inline: auto;
+} 
+
+
+footer {
+   height: 30vh;
+}
+
+.footer-layout {
+   display: flex;
+   
+   justify-content: space-between;
+   align-items:flex-start;
+
+   margin-top: auto;
+}
+
+footer > .flex-layout {
+   flex-basis: 33%;
+}
+
+footer > div:last-child{
+   flex-basis: 33%;
+}
+
+footer nav ul {
+   padding-left: 0;
+}
+
+.grid-col-span-2 {
+   grid-column: span 2;
+}
+
+.center {
+   display: grid;
+   place-items: center;
+}
+
+
+/* text styling */
+
+.logo-text, h1, h2, h3, h4, h5, h6 {
+   font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+   font-size: 1.618rem;
+   font-weight:700;
+}
+
+.logo-text {
+   color: white;
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+
+p {
+   line-height: 1.618;
+   color: #3a3a3a;
+}
+
+
+.grid-layout div p {
+   margin-top:0;
+}
+
+
+li {
+   line-height: 1.618;
+   margin-bottom: 0.5rem;
+   color: #3a3a3a;
+}
+
+article {
+   margin-bottom: 6rem;
+}
+
+/* image styling */
+
+img {
+   display: block;
+   max-width: 100%;
+   object-fit: cover;
+   border-radius: 1rem;
+}
+
+.logo {
+   width: 32px;
+   height: 32px;
+   
+}
+
+/* link styling */
+
+.nav-link:link, a:visited {
+   color: #f6f6f6;
+   font-weight: 500;
+   text-decoration-color: transparent;
+   font-size: 1.125rem;
+   text-underline-offset: 0.3rem;
+   transition: text-decoration-color 250ms ease-in-out;
+   
+}
+
+.nav-link:hover {
+   color: white;
+   text-decoration-color: #f6f6f6;
+  
+   
+}
+
+.nav-link:active {
+   color: darkblue;
+
+}
+
+.inline-link:link, .inline-link:visited{
+   color: rgb(236, 47, 142);
+   text-decoration: underline;
+   text-decoration-style: dotted;
+   text-underline-offset: 0.3rem;
+   text-decoration-color: rgb(236, 47, 142);
+
+}
+
+.inline-link:hover {
+   color: hotpink;
+ 
+   text-decoration-style: solid;
+}
